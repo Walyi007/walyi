@@ -30,3 +30,14 @@ git push -u origin main
 - web-dev : HTML/CSS/JS
 - design-uiux : dark mode, responsive
 - seo-writing : meta, title
+
+## Formulaire de contact
+Le formulaire utilise Formspree pour envoyer les messages à votre adresse e-mail.
+1. Créez un formulaire gratuit sur [Formspree.io](https://formspree.io/)
+2. Obtenez votre endpoint (ex: https://formspree.io/f/abcdefg)
+3. Remplacez l'attribut `action` du formulaire dans `index.html` par votre endpoint :
+    ```html
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/VOTRE_ID" method="POST" novalidate>
+    ```
+4. Ajoutez un attribut `name` à chaque champ d'entrée (name, email, subject, message) afin que Formspree puisse les traiter correctement.
+5. Les messages seront envoyés à l'adresse e-mail associée à votre compte Formspree (vous pouvez y associer yessoufouwalyi@gmail.com).
