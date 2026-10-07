@@ -6,7 +6,7 @@ Portfolio / vitrine de Walyi Yessoufou Ademonla Alamou — Data Analyst & Dev à
 - **Accueil** — hero, services, stats
 - **Prestations** — compétences techniques
 - **Projets** — réalisations data/dev
-- **Contact** — formulaire + réseaux
+- **Contact** — formulaire + réseaux + WhatsApp
 
 ## Déployer sur GitHub Pages
 
