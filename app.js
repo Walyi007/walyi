@@ -2,6 +2,7 @@
     PORTFOLIO — interactions
     ========================================================= */
 
+
 /* ===== LOADER ===== */
 (function () {
   const loader = document.getElementById('loader');
@@ -153,8 +154,8 @@
         const start = performance.now();
 
         function step(now) {
-          t = Math.min(1, (now - start) / dur);
-          eased = 1 - Math.pow(1 - t, 3);
+          const t = Math.min(1, (now - start) / dur);
+          const eased = 1 - Math.pow(1 - t, 3);
           el.textContent = Math.round(target * eased) + (t === 1 && target >= 10 ? '+' : '');
           if (t < 1) requestAnimationFrame(step);
         }
@@ -170,21 +171,32 @@
 /* ===== BARRES DE COMPÉTENCES ===== */
 (function () {
   const bars = document.querySelectorAll('.track i');
-  if (!bars.length) return;
+  console.log('[Bars] Found', bars.length, 'bars');
+  if (!bars.length) {
+    console.log('[Bars] No bars found, exiting');
+    return;
+  }
 
   const io = new IntersectionObserver(
     (entries) => {
+      console.log('[Bars] IntersectionObserver callback', entries.length);
       entries.forEach((entry, i) => {
-        if (!entry.isIntersecting) return;
-        el = entry.target;
+        if (!entry.isIntersecting) {
+          console.log('[Bars] Entry not intersecting');
+          return;
+        }
+        const el = entry.target;
+        console.log('[Bars] Setting width for', el, 'data-w:', el.dataset.w);
         setTimeout(() => {
-          el.style.width = (el.dataset.w || '0') + '%';
+          el.style.width = (parseInt(el.dataset.w, 10) || 0) + '%';
+          console.log('[Bars] Set width to', el.style.width);
         }, i * 120);
         io.unobserve(el);
       });
     },
     { threshold: 0.4 }
   );
+  console.log('[Bars] Observing', bars.length, 'elements');
   bars.forEach((el) => io.observe(el));
 })();
 
@@ -276,4 +288,4 @@
       note.className = 'form-note ok';
     }, 900);
   });
-})();
+});
