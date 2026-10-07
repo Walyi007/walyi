@@ -257,16 +257,23 @@
   const note = document.getElementById('formNote');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  // Initialize Formspree SDK
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', {
+    formElement: form,
+    formId: 'mdeaedzz'
+  });
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // ---- validation côté client (vous pouvez garder la vôtre) ----
     const name = form.querySelector('#name').value.trim();
     const email = form.querySelector('#email').value.trim();
     const message = form.querySelector('#message').value.trim();
-    const btn = document.getElementById('submitBtn');
 
     if (!name || !email || !message) {
-      note.textContent = 'Merci de remplir le nom, l\u2019email et le message.';
+      note.textContent = 'Merci de remplir le nom, l’email et le message.';
       note.className = 'form-note err';
       return;
     }
@@ -276,16 +283,34 @@
       return;
     }
 
+    // ---- UI d’envoi (spinner) ----
+    const btn = document.getElementById('submitBtn');
     const original = btn.innerHTML;
     btn.innerHTML = '<span>Envoi en cours…</span><i class="fa-solid fa-spinner fa-spin"></i>';
     btn.disabled = true;
 
-    setTimeout(() => {
-      btn.innerHTML = original;
-      btn.disabled = false;
-      form.reset();
-      note.textContent = 'Message bien envoyé ! Walyi vous répondra très vite.';
-      note.className = 'form-note ok';
-    }, 900);
+    // ---- soumission via le SDK Formspree ----
+    window.formspree('submitForm', '#contactForm')
+      .then(({ ok, data, error }) => {
+        btn.innerHTML = original;
+        btn.disabled = false;
+        form.reset();
+
+        if (ok) {
+          note.textContent = 'Message bien envoyé ! Walyi vous répondra très vite.';
+          note.className = 'form-note ok';
+        } else {
+          note.textContent = 'Échec de l’envoi. Veuillez réessayer.';
+          note.className = 'form-note err';
+          console.error('Formspree error:', error);
+        }
+      })
+      .catch(err => {
+        btn.innerHTML = original;
+        btn.disabled = false;
+        note.textContent = 'Erreur inattendue lors de l’envoi.';
+        note.className = 'form-note err';
+        console.error(err);
+      });
   });
-});
+})();
