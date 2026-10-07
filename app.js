@@ -1,6 +1,6 @@
 /* =========================================================
-   PORTFOLIO — interactions
-   ========================================================= */
+    PORTFOLIO — interactions
+    ========================================================= */
 
 /* ===== LOADER ===== */
 (function () {
@@ -117,7 +117,7 @@
   }
 })();
 
-/* ===== REVEAL AU SCROLL ===== */
+/* ===== REVEAU AU SCROLL ===== */
 (function () {
   const items = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
@@ -153,8 +153,8 @@
         const start = performance.now();
 
         function step(now) {
-          const t = Math.min(1, (now - start) / dur);
-          const eased = 1 - Math.pow(1 - t, 3);
+          t = Math.min(1, (now - start) / dur);
+          eased = 1 - Math.pow(1 - t, 3);
           el.textContent = Math.round(target * eased) + (t === 1 && target >= 10 ? '+' : '');
           if (t < 1) requestAnimationFrame(step);
         }
@@ -176,7 +176,7 @@
     (entries) => {
       entries.forEach((entry, i) => {
         if (!entry.isIntersecting) return;
-        const el = entry.target;
+        el = entry.target;
         setTimeout(() => {
           el.style.width = (el.dataset.w || '0') + '%';
         }, i * 120);
@@ -203,7 +203,7 @@
   let r = 0, c = 0, deleting = false;
 
   function tick() {
-    const word = roles[r];
+    word = roles[r];
     el.textContent = deleting ? word.slice(0, c--) : word.slice(0, c++);
 
     let delay = deleting ? 45 : 85;

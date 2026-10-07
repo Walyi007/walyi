@@ -1,0 +1,242 @@
+{
+  "fr": {
+    "nav": {
+      "about": "À propos",
+      "skills": "Compétences",
+      "experience": "Parcours",
+      "projects": "Projets",
+      "contact": "Contact"
+    },
+    "hero": {
+      "pill": "Data Analyst & Dev — Cotonou, Bénin — Services & Projets",
+      "title": "Walyi Yessoufou<br><span class=\"grad\">Data Analyst & Dev</span>",
+      "role": "SQL • Python • Power BI • Laravel • Automatisation<br>Je transforme tes données en décisions concrètes.",
+      "ctaProjects": "Voir mes projets",
+      "ctaCV": "Télécharger le CV"
+    },
+    "services": {
+      "eyebrow": "01 — Services",
+      "title": "Ce que je <span class=\"grad\">fais</span>",
+      "description": "Data, dev et automatisation — des solutions concrètes pour ton business.",
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "SQL, Python, Power BI — je nettoie, analyse et visualise tes données pour des décisions éclairées."
+      },
+      "webDev": {
+        "title": "Développement Web",
+        "description": "Laravel, HTML/CSS, JS — sites vitrines, apps web, dashboards interactifs."
+      },
+      "automation": {
+        "title": "Automatisation",
+        "description": "Scripts Python, ETL, web scraping — j'automatise tes tâches répétitives pour gagner du temps."
+      },
+      "excelBi": {
+        "title": "Excel & BI",
+        "description": "Tableaux de bord Power BI, Excel avancé, TCD, Power Query — tes données devenues visibles."
+      }
+    },
+    "experience": {
+      "eyebrow": "03 — Parcours",
+      "title": "Expériences & <span class=\"grad\">formation</span>",
+      "positions": [
+        {
+          "period": "Octobre 2024 — Décembre 2024",
+          "title": "Stagiaire Fullstack",
+          "company": "Port Autonome de Cotonou",
+          "description": "Développement d'une application web de gestion des flux avec Laravel, intégrant des bases de données relationnelles. Analyse et traitement de données pour optimiser les flux opérationnels et améliorer la traçabilité.",
+          "result": "Optimisation du suivi des opérations et réduction des erreurs de saisie."
+        },
+        {
+          "period": "Février 2024 — Juin 2024",
+          "title": "Stagiaire Développement",
+          "company": "UATM Gasa Formation",
+          "description": "Développement d'un programme avec Python, intégrant la gestion et l'analyse de données. Traitement des données en temps réel pour améliorer les fonctionnalités du programme. Prototypage et optimisation des algorithmes de traitement des données.",
+          "result": "Prototype fonctionnel démontrant des performances optimisées."
+        },
+        {
+          "period": "2021 — 2024",
+          "title": "Licence en Systèmes Informatiques et Logiciels",
+          "company": "UATM Gasa Formation, Cotonou",
+          "description": "Formation en conception de systèmes, bases de données, programmation (Python, PHP, JavaScript), et gestion de projets."
+        },
+        {
+          "period": "2020 — 2021",
+          "title": "Baccalauréat Scientifique D",
+          "company": "CS Gloria Dei, Cotonou",
+          "description": "Baccalauréat série D (Mathématiques et Sciences de la Vie et de la Terre)."
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "04 — Projets",
+      "title": "Une sélection de mes <span class=\"grad\">réalisations</span>"
+    },
+    "contact": {
+      "eyebrow": "05 — Contact",
+      "title": "Travaillons <span class=\"grad\">ensemble</span>",
+      "description": "Une question, un projet ou une opportunité ? Écrivez-moi, je réponds rapidement.",
+      "form": {
+        "name": "Nom",
+        "email": "Email",
+        "subject": "Sujet",
+        "message": "Message",
+        "submit": "Envoyer le message"
+      },
+      "contactInfo": {
+        "email": "walyiyessoufou@gmail.com",
+        "phone": "+229 01 61 55 53 21",
+        "whatsapp": "WhatsApp",
+        "location": "Agblangandan, Sèkandji, Cotonou, Bénin"
+      },
+      "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "portfolio": "Portfolio"
+      }
+    },
+    "footer": {
+      "brand": "Walyi Yessoufou Ademonla Alamou — Portfolio",
+      "links": {
+        "about": "À propos",
+        "skills": "Compétences",
+        "experience": "Parcours",
+        "projects": "Projets",
+        "contact": "Contact"
+      },
+      "copyright": "Tous droits réservés."
+    },
+    "buttons": {
+      "themeToggle": "Changer de thème",
+      "burger": "Menu",
+      "toTop": "Haut de page"
+    },
+    "misc": {
+      "year": "",
+      "loading": "Chargement...",
+      "sending": "Envoi en cours…",
+      "sent": "Message bien envoyé ! Walyi vous répondra très vite.",
+      "error": "Merci de remplir le nom, l'email et le message.",
+      "invalidEmail": "Adresse email invalide."
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "pill": "Data Analyst & Dev — Cotonou, Benin — Services & Projects",
+      "title": "Walyi Yessoufou<br><span class=\"grad\">Data Analyst & Dev</span>",
+      "role": "SQL • Python • Power BI • Laravel • Automation<br>I turn your data into concrete decisions.",
+      "ctaProjects": "View my projects",
+      "ctaCV": "Download CV"
+    },
+    "services": {
+      "eyebrow": "01 — Services",
+      "title": "What I <span class=\"grad\">do</span>",
+      "description": "Data, dev and automation — concrete solutions for your business.",
+      "dataAnalysis": {
+        "title": "Data Analysis",
+        "description": "SQL, Python, Power BI — I clean, analyze and visualize your data for informed decisions."
+      },
+      "webDev": {
+        "title": "Web Development",
+        "description": "Laravel, HTML/CSS, JS — brochure sites, web apps, interactive dashboards."
+      },
+      "automation": {
+        "title": "Automation",
+        "description": "Python scripts, ETL, web scraping — I automate your repetitive tasks to save you time."
+      },
+      "excelBi": {
+        "title": "Excel & BI",
+        "description": "Power BI dashboards, advanced Excel, pivot tables, Power Query — your data made visible."
+      }
+    },
+    "experience": {
+      "eyebrow": "03 — Experience",
+      "title": "Experiences & <span class=\"grad\">education</span>",
+      "positions": [
+        {
+          "period": "October 2024 — December 2024",
+          "title": "Fullstack Intern",
+          "company": "Port Autonome de Cotonou",
+          "description": "Developed a web application for operational flow management with Laravel, integrating relational databases. Data analysis and processing to optimize operational flows and improve traceability.",
+          "result": "Optimized operational tracking and reduced data entry errors."
+        },
+        {
+          "period": "February 2024 — June 2024",
+          "title": "Development Intern",
+          "company": "UATM Gasa Formation",
+          "description": "Developed a program with Python, integrating data management and analysis. Real-time data processing to improve program functionality. Prototyping and optimization of data processing algorithms.",
+          "result": "Functional prototype demonstrating optimized performance."
+        },
+        {
+          "period": "2021 — 2024",
+          "title": "Bachelor's in Computer Systems and Software",
+          "company": "UATM Gasa Formation, Cotonou",
+          "description": "Training in systems design, databases, programming (Python, PHP, JavaScript), and project management."
+        },
+        {
+          "period": "2020 — 2021",
+          "title": "Scientific Baccalaureate D",
+          "company": "CS Gloria Dei, Cotonou",
+          "description": "Scientific Baccalaureate D (Mathematics and Life and Earth Sciences)."
+        }
+      ]
+    },
+    "projects": {
+      "eyebrow": "04 — Projects",
+      "title": "A selection of my <span class=\"grad\">achievements</span>"
+    },
+    "contact": {
+      "eyebrow": "05 — Contact",
+      "title": "Let's work <span class=\"grad\">together</span>",
+      "description": "Have a question, project or opportunity? Write to me, I respond quickly.",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submit": "Send message"
+      },
+      "contactInfo": {
+        "email": "walyiyessoufou@gmail.com",
+        "phone": "+229 01 61 55 53 21",
+        "whatsapp": "WhatsApp",
+        "location": "Agblangandan, Sèkandji, Cotonou, Benin"
+      },
+      "socials": {
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "portfolio": "Portfolio"
+      }
+    },
+    "footer": {
+      "brand": "Walyi Yessoufou Ademonla Alamou — Portfolio",
+      "links": {
+        "about": "About",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+      },
+      "copyright": "All rights reserved."
+    },
+    "buttons": {
+      "themeToggle": "Change theme",
+      "burger": "Menu",
+      "toTop": "Back to top"
+    },
+    "misc": {
+      "year": "",
+      "loading": "Loading...",
+      "sending": "Sending…",
+      "sent": "Message sent! Walyi will get back to you shortly.",
+      "error": "Please fill in name, email and message.",
+      "invalidEmail": "Invalid email address."
+    }
+  }
+}
