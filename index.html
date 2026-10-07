@@ -10,6 +10,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 <link rel="stylesheet" href="style.css" />
+<style>
+  .language-selector {
+    position: relative;
+    display: inline-block;
+    margin-left: 12px;
+  }
+  .language-btn {
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .language-btn:hover {
+    color: var(--accent);
+  }
+  .language-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-2);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 8px 0;
+    min-width: 80px;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .language-dropdown.show {
+    display: block;
+  }
+  .language-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+  }
+  .language-dropdown a:hover {
+    background: var(--accent);
+    color: #0a0a0a;
+  }
+</style>
 </head>
 <body>
 
@@ -431,6 +479,56 @@
   <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<script>
+// Language selector placeholder
+document.addEventListener('DOMContentLoaded', function() {
+  // Create language selector element
+  const langSelector = document.createElement('div');
+  langSelector.className = 'language-selector';
+  langSelector.innerHTML = `
+    <button class="language-btn" id="languageBtn" aria-label="Changer de langue">
+      <span id="currentLang">FR</span>
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="language-dropdown" id="languageDropdown">
+      <a href="#" data-lang="fr">Français</a>
+      <a href="#" data-lang="en">English</a>
+    </div>
+  `;
+  // Insert after themeToggle button
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.parentNode.insertBefore(langSelector, themeToggle.nextSibling);
+  }
+  // Placeholder functionality
+  const currentLangSpan = document.getElementById('currentLang');
+  const langDropdown = document.getElementById('languageDropdown');
+  const languageBtn = document.getElementById('languageBtn');
+  if (languageBtn && langDropdown && currentLangSpan) {
+    languageBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langDropdown.classList.toggle('show');
+    });
+    langDropdown.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const lang = this.getAttribute('data-lang');
+        document.documentElement.setAttribute('data-lang', lang);
+        currentLangSpan.textContent = lang.toUpperCase();
+        langDropdown.classList.remove('show');
+        // TODO: Implement actual translation
+        console.log('Language switched to:', lang);
+      });
+    });
+  }
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!document.getElementById('languageBtn').contains(e.target) && !document.getElementById('languageDropdown').contains(e.target)) {
+      document.getElementById('languageDropdown').classList.remove('show');
+    }
+  });
+});
+</script>
 <script src="app.js"></script>
 </body>
 </html>

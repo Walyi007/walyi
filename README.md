@@ -30,6 +30,9 @@ git push -u origin main
 - web-dev : HTML/CSS/JS
 - design-uiux : dark mode, responsive
 - seo-writing : meta, title
+## Sélecteur de langue
+- Un sélecteur de langue FR/EN est présent dans l’en‑tête, permettant de basculer entre français et anglais.
+- La fonctionnalité de traduction est actuellement en placeholder ; les textes peuvent être mis à jour facilement en éditant le dictionnaire JavaScript.
 
 ## Formulaire de contact
 Le formulaire utilise Formspree pour envoyer les messages à votre adresse e-mail.
