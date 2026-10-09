@@ -12,7 +12,8 @@
       "title": "Walyi Yessoufou<br><span class=\"grad\">Data Analyst & Dev</span>",
       "role": "SQL • Python • Power BI • Laravel • Automatisation<br>Je transforme tes données en décisions concrètes.",
       "ctaProjects": "Voir mes projets",
-      "ctaCV": "Télécharger le CV"
+      "ctaCV": "Télécharger le CV",
+      "desc": "SQL • Python • Power BI • Laravel • Automatisation<br>Je transforme tes données en décisions concrètes."
     },
     "services": {
       "eyebrow": "01 — Services",
@@ -139,7 +140,8 @@
       "title": "Walyi Yessoufou<br><span class=\"grad\">Data Analyst & Dev</span>",
       "role": "SQL • Python • Power BI • Laravel • Automation<br>I turn your data into concrete decisions.",
       "ctaProjects": "See my projects",
-      "ctaCV": "Download CV"
+      "ctaCV": "Download CV",
+      "desc": "SQL • Python • Power BI • Laravel • Automation<br>I turn your data into concrete decisions."
     },
     "services": {
       "eyebrow": "01 — Services",

@@ -171,7 +171,7 @@
              <span>Services</span>
            </div>
            <div class="stat">
-             <strong data-count="1">0</span>
+             <strong data-count="1">0</strong>
              <span>Année expérience</span>
            </div>
          </div>
@@ -669,7 +669,8 @@
        console.log('Initial translation to FR done');
      });
    </script>
-   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+   <script>window.addEventListener('load', () => { const loader = document.getElementById('loader'); if (loader) loader.style.display = 'none'; });</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
    <script src="app.js"></script>
 </body>
 </html>
