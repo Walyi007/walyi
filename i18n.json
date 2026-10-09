@@ -81,18 +81,25 @@
         "subject": "Sujet",
         "message": "Message",
         "submit": "Envoyer le message"
-      },
-      "contactInfo": {
-        "email": "walyiyessoufou@gmail.com",
-        "phone": "+229 01 61 55 53 21",
-        "whatsapp": "WhatsApp",
-        "location": "Agblangandan, Sèkandji, Cotonou, Bénin"
-      },
-      "socials": {
-        "github": "GitHub",
-        "linkedin": "LinkedIn",
-        "portfolio": "Portfolio"
       }
+    },
+    "about-site": {
+      "eyebrow": "06 — À propos du site",
+      "title": "Documentation du portfolio",
+      "descriptionList": [
+        "HTML5 — structure sémantique.",
+        "CSS3 avec Flexbox/Gradients, variables CSS.",
+        "JavaScript vanilla (IntersectionObserver, Formspree SDK, thème, loader, etc.).",
+        "Font Awesome 6 pour les icônes.",
+        "Formspree pour le formulaire de contact (AJAX).",
+        "GitHub Pages pour l'hébergement statique."
+      ],
+      "description": "Le site est responsive, accessible et optimisé pour le chargement rapide."
+    },
+    "blog": {
+      "eyebrow": "07 — Blog",
+      "title": "Mes articles techniques",
+      "description": "Voici quelques articles où je partage mes découvertes en data analysis et développement."
     },
     "footer": {
       "brand": "Walyi Yessoufou Ademonla Alamou — Portfolio",
@@ -103,7 +110,7 @@
         "projects": "Projets",
         "contact": "Contact"
       },
-      "copyright": "Tous droits réservés."
+      "copyright": "© <span id=\"year\"></span> Walyi Yessoufou Ademonla Alamou. Tous droits réservés."
     },
     "buttons": {
       "themeToggle": "Changer de thème",
@@ -113,9 +120,9 @@
     "misc": {
       "year": "",
       "loading": "Chargement...",
-      "sending": "Envoi en cours…",
-      "sent": "Message bien envoyé ! Walyi vous répondra très vite.",
-      "error": "Merci de remplir le nom, l'email et le message.",
+      "sending": "Envoi…",
+      "sent": "Message envoyé ! Walyi vous répondra très vite.",
+      "error": "Veuillez remplir le nom, l'email et le message.",
       "invalidEmail": "Adresse email invalide."
     }
   },
@@ -131,13 +138,13 @@
       "pill": "Data Analyst & Dev — Cotonou, Benin — Services & Projects",
       "title": "Walyi Yessoufou<br><span class=\"grad\">Data Analyst & Dev</span>",
       "role": "SQL • Python • Power BI • Laravel • Automation<br>I turn your data into concrete decisions.",
-      "ctaProjects": "View my projects",
+      "ctaProjects": "See my projects",
       "ctaCV": "Download CV"
     },
     "services": {
       "eyebrow": "01 — Services",
       "title": "What I <span class=\"grad\">do</span>",
-      "description": "Data, dev and automation — concrete solutions for your business.",
+      "description": "Data, dev & automation — concrete solutions for your business.",
       "dataAnalysis": {
         "title": "Data Analysis",
         "description": "SQL, Python, Power BI — I clean, analyze and visualize your data for informed decisions."
@@ -148,11 +155,11 @@
       },
       "automation": {
         "title": "Automation",
-        "description": "Python scripts, ETL, web scraping — I automate your repetitive tasks to save you time."
+        "description": "Python scripts, ETL, web scraping — I automate your repetitive tasks to save time."
       },
       "excelBi": {
         "title": "Excel & BI",
-        "description": "Power BI dashboards, advanced Excel, pivot tables, Power Query — your data made visible."
+        "description": "Power BI dashboards, advanced Excel, Pivot Tables, Power Query — your data made visible."
       }
     },
     "experience": {
@@ -160,30 +167,30 @@
       "title": "Experiences & <span class=\"grad\">education</span>",
       "positions": [
         {
-          "period": "October 2024 — December 2024",
+          "period": "Oct 2024 – Dec 2024",
           "title": "Fullstack Intern",
-          "company": "Port Autonome de Cotonou",
-          "description": "Developed a web application for operational flow management with Laravel, integrating relational databases. Data analysis and processing to optimize operational flows and improve traceability.",
+          "company": "Port Autonomous of Cotonou",
+          "description": "Developed a web application for operational flows management with Laravel and relational databases. Analyzed and processed data to optimize operational flows and improve traceability.",
           "result": "Optimized operational tracking and reduced data entry errors."
         },
         {
-          "period": "February 2024 — June 2024",
+          "period": "Feb 2024 – Jun 2024",
           "title": "Development Intern",
           "company": "UATM Gasa Formation",
-          "description": "Developed a program with Python, integrating data management and analysis. Real-time data processing to improve program functionality. Prototyping and optimization of data processing algorithms.",
+          "description": "Developed a Python program involving data management and processing. Processed data and optimized program functionalities. Prototyping and testing to improve program performance.",
           "result": "Functional prototype demonstrating optimized performance."
         },
         {
           "period": "2021 — 2024",
-          "title": "Bachelor's in Computer Systems and Software",
+          "title": "Bachelor in Information Systems and Software",
           "company": "UATM Gasa Formation, Cotonou",
-          "description": "Training in systems design, databases, programming (Python, PHP, JavaScript), and project management."
+          "description": "Training in system design, databases, programming (Python, PHP, JavaScript), and project management."
         },
         {
           "period": "2020 — 2021",
           "title": "Scientific Baccalaureate D",
           "company": "CS Gloria Dei, Cotonou",
-          "description": "Scientific Baccalaureate D (Mathematics and Life and Earth Sciences)."
+          "description": "Scientific Baccalaureate series D (Mathematics and Life and Earth Sciences)."
         }
       ]
     },
@@ -194,25 +201,32 @@
     "contact": {
       "eyebrow": "05 — Contact",
       "title": "Let's work <span class=\"grad\">together</span>",
-      "description": "Have a question, project or opportunity? Write to me, I respond quickly.",
+      "description": "Have a question, a project or an opportunity? Write to me, I respond quickly.",
       "form": {
         "name": "Name",
         "email": "Email",
         "subject": "Subject",
         "message": "Message",
-        "submit": "Send message"
-      },
-      "contactInfo": {
-        "email": "walyiyessoufou@gmail.com",
-        "phone": "+229 01 61 55 53 21",
-        "whatsapp": "WhatsApp",
-        "location": "Agblangandan, Sèkandji, Cotonou, Benin"
-      },
-      "socials": {
-        "github": "GitHub",
-        "linkedin": "LinkedIn",
-        "portfolio": "Portfolio"
+        "submit": "Send Message"
       }
+    },
+    "about-site": {
+      "eyebrow": "06 — About the site",
+      "title": "Portfolio Documentation",
+      "descriptionList": [
+        "HTML5 — semantic structure.",
+        "CSS3 with Flexbox/Gradients, CSS variables.",
+        "Vanilla JavaScript (IntersectionObserver, Formspree SDK, theme, loader, etc.).",
+        "Font Awesome 6 for icons.",
+        "Formspree for the contact form (AJAX).",
+        "GitHub Pages for static hosting."
+      ],
+      "description": "The site is responsive, accessible and optimized for fast loading."
+    },
+    "blog": {
+      "eyebrow": "07 — Blog",
+      "title": "My Technical Articles",
+      "description": "Here are some articles where I share my discoveries in data analysis and development."
     },
     "footer": {
       "brand": "Walyi Yessoufou Ademonla Alamou — Portfolio",
@@ -223,7 +237,7 @@
         "projects": "Projects",
         "contact": "Contact"
       },
-      "copyright": "All rights reserved."
+      "copyright": "© <span id=\"year\"></span> Walyi Yessoufou Ademonla Alamou. All rights reserved."
     },
     "buttons": {
       "themeToggle": "Change theme",
