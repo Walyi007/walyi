@@ -89,490 +89,497 @@
 </script>
 </head>
 <body>
-  
-  <!-- LOADER -->
-  <div class="loader" id="loader">
-    <div class="loader-mark">WY</div>
-    <div class="loader-bar"><span id="loaderFill"></span></div>
-  </div>
-  
-  <!-- PROGRESS -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-  
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#hero" class="brand">
-        <span class="brand-mark">WY</span>
-        <span class="brand-text">Walyi<em>.</em></span>
-      </a>
-      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
-        <a href="#services" data-i18n="nav.about">À propos</a>
-        <a href="#prestations" data-i18n="nav.skills">Compétences</a>
-        <a href="#experience" data-i18n="nav.experience">Parcours</a>
-        <a href="#projects" data-i18n="nav.projects">Projets</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <div class="nav-actions">
-        <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">
-          <i class="fa-solid fa-moon"></i>
-        </button>
-        <a href="assets/cv.pdf" download class="btn btn-sm btn-ghost">
-          <i class="fa-solid fa-download"></i> CV
-        </a>
-        <a href="#contact" class="btn btn-sm btn-solid">Me contacter</a>
-        <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-  
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-glow g1"></div>
-    <div class="hero-glow g2"></div>
-    <div class="hero-grid-bg"></div>
-  
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <div class="pill reveal">
-          <span class="dot"></span> Data Analyst & Dev — Cotonou, Bénin — Services & Projets
-        </div>
-  
-        <h1 class="hero-title reveal">
-          Walyi Yessoufou<br />
-          <span class="grad">Data Analyst & Dev</span>
-        </h1>
-  
-        <p class="hero-role reveal">
-          <span id="typed"></span><span class="caret"></span>
-        </p>
-  
-        <p class="hero-desc reveal">
-          SQL • Python • Power BI • Laravel • Automatisation<br />
-          Je transforme tes données en décisions concrètes.
-        </p>
-  
-        <div class="hero-cta reveal">
-          <a href="#projects" class="btn btn-solid">Voir mes projets <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="assets/cv.pdf" download class="btn btn-ghost">
-            <i class="fa-solid fa-download"></i> Télécharger le CV
-          </a>
-        </div>
-  
-        <div class="hero-stats reveal">
-          <div class="stat">
-            <strong data-count="4">0</strong>
-            <span>Projets</span>
-          </div>
-          <div class="stat">
-            <strong data-count="3">0</strong>
-            <span>Services</span>
-          </div>
-          <div class="stat">
-            <strong data-count="1">0</strong>
-            <span>Année expérience</span>
-          </div>
-        </div>
-      </div>
-  
-      <!-- PHOTO PRO -->
-      <div class="hero-photo reveal">
-        <div class="photo-frame">
-          <div class="photo-ring"></div>
-          <div class="photo">
-            <img src="assets/photo-pro.jpg" alt="Walyi Yessoufou Ademonla Alamou — Photo professionnelle" />
-          </div>
-          <div class="float-card fc1"><i class="fa-solid fa-chart-line"></i> Data</div>
-          <div class="float-card fc2"><i class="fa-solid fa-code"></i> Dev</div>
-          <div class="float-card fc3"><i class="fa-solid fa-bolt"></i> Automatisation</div>
-        </div>
-      </div>
-    </div>
-  
-    <a href="#services" class="scroll-hint"><span></span>Défiler</a>
-  </section>
-  
-  <!-- MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span>SQL</span><span>•</span><span>Python</span><span>•</span><span>Power BI</span><span>•</span>
-      <span>Tableau</span><span>•</span><span>PHP / Laravel</span><span>•</span>
-      <span>Excel avancé</span><span>•</span>
-      <span>Git</span><span>•</span><span>Databricks</span><span>•</span>
-      <span>ETL</span><span>•</span>
-      <span>SQL</span><span>•</span><span>Python</span><span>•</span><span>Power BI</span><span>•</span>
-      <span>Tableau</span><span>•</span><span>PHP / Laravel</span><span>•</span>
-      <span>Excel avancé</span><span>•</span>
-      <span>Git</span><span>•</span><span>Databricks</span><span>•</span>
-      <span>ETL</span><span>•</span>
-    </div>
-  </div>
-  
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="services.eyebrow">01 — Services</span>
-        <h2 data-i18n="services.title">Ce que je <span class="grad">fais</span></h2>
-        <p data-i18n="services.description">Data, dev et automatisation — des solutions concrètes pour ton business.</p>
-      </div>
-  
-      <div class="services-grid">
-        <article class="service-card reveal">
-          <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3 data-i18n="services.dataAnalysis.title">Data Analysis</h3>
-          <p data-i18n="services.dataAnalysis.description">SQL, Python, Power BI — je nettoie, analyse et visualise tes données pour des décisions éclairées.</p>
-          <div class="tags"><span>SQL</span><span>Python</span><span>Power BI</span></div>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
-          <h3 data-i18n="services.webDev.title">Développement Web</h3>
-          <p data-i18n="services.webDev.description">Laravel, HTML/CSS, JS — sites vitrines, apps web, dashboards interactifs.</p>
-          <div class="tags"><span>Laravel</span><span>PHP</span><span>JS</span></div>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h3 data-i18n="services.automation.title">Automatisation</h3>
-          <p data-i18n="services.automation.description">Scripts Python, ETL, web scraping — j'automatise tes tâches répétitives pour gagner du temps.</p>
-          <div class="tags"><span>Python</span><span>ETL</span><span>Scraping</span></div>
-        </article>
-        <article class="service-card reveal">
-          <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
-          <h3 data-i18n="services.excelBi.title">Excel & BI</h3>
-          <p data-i18n="services.excelBi.description">Tableaux de bord Power BI, Excel avancé, TCD, Power Query — tes données devenues visibles.</p>
-          <div class="tags"><span>Excel</span><span>Power BI</span><span>DAX</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-  
-  <!-- PRESTATIONS -->
-  <section class="section section-alt" id="prestations">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="prestations.eyebrow">02 — Prestations</span>
-        <h2 data-i18n="prestations.title">Les outils que j'utilise <span class="grad">au quotidien</span></h2>
-      </div>
-  
-      <div class="skills-wrap">
-        <div class="skill-col reveal">
-          <h3><i class="fa-solid fa-database"></i> Bases de données</h3>
-          <div class="bars">
-            <div class="bar"><div class="bar-top"><span>SQL — MySQL, PostgreSQL</span><span>85%</span></div><div class="track"><i data-w="85"></i></div></div>
-            <div class="bar"><div class="bar-top"><span>Cloud & Big Data — Azure, AWS, Databricks</span><span>40%</span></div><div class="track"><i data-w="40"></i></div></div>
-            <div class="bar"><div class="bar-top"><span>Outils & Méthodes — Excel, TCD, Git, ETL</span><span>75%</span></div><div class="track"><i data-w="75"></i></div></div>
-          </div>
-        </div>
-  
-        <div class="skill-col reveal">
-          <h3><i class="fa-solid fa-chart-line"></i> Analyse & Visualisation</h3>
-          <div class="bars">
-            <div class="bar"><div class="bar-top"><span>Python — Pandas, NumPy, Matplotlib</span><span>75%</span></div><div class="track"><i data-w="75"></i></div></div>
-            <div class="bar"><div class="bar-top"><span>Tableau & Power BI (DAX, Power Query)</span><span>70%</span></div><div class="track"><i data-w="70"></i></div></div>
-            <div class="bar"><div class="bar-top"><span>Développement — PHP, JS, Laravel, HTML/CSS</span><span>65%</span></div><div class="track"><i data-w="65"></i></div></div>
-          </div>
-        </div>
-      </div>
-  
-      <div class="chips reveal">
-        <span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>Python</span>
-        <span>Pandas</span><span>NumPy</span><span>Tableau</span><span>Power BI</span>
-        <span>Excel</span><span>Power Query</span><span>TCD</span><span>DAX</span><span>PHP</span>
-        <span>JavaScript</span><span>Laravel</span><span>HTML / CSS</span><span>Git</span>
-        <span>Azure</span><span>AWS</span><span>Databricks</span><span>ETL</span><span>Web Scraping</span>
-      </div>
-    </div>
-  </section>
-  
-  <!-- EXPERIENCE -->
-  <section class="section" id="experience">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="experience.eyebrow">03 — Parcours</span>
-        <h2 data-i18n="experience.title">Expériences & <span class="grad">formation</span></h2>
-      </div>
-  
-      <div class="timeline">
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">Octobre 2024 — Décembre 2024</span>
-            <h3>Stagiaire Fullstack</h3>
-            <h4>Port Autonome de Cotonou</h4>
-            <p>Développement d'une application web de gestion des flux avec Laravel, intégrant des bases de données relationnelles. Analyse et traitement de données pour optimiser les flux opérationnels et améliorer la traçabilité.</p>
-            <div class="tags"><span>Laravel</span><span>PHP</span><span>SQL</span><span>Analyse de données</span></div>
-            <p style="margin-top:14px;font-size:0.9rem;color:var(--accent);"><strong>Résultat :</strong> Optimisation du suivi des opérations et réduction des erreurs de saisie.</p>
-          </div>
-        </div>
-  
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">Février 2024 — Juin 2024</span>
-            <h3>Stagiaire Développement</h3>
-            <h4>UATM Gasa Formation</h4>
-            <p>Développement d'un programme avec Python, intégrant la gestion et l'analyse de données. Traitement des données en temps réel pour améliorer les fonctionnalités du programme. Prototypage et optimisation des algorithmes de traitement des données.</p>
-            <div class="tags"><span>Python</span><span>Analyse de données</span><span>Algorithmes</span></div>
-            <p style="margin-top:14px;font-size:0.9rem;color:var(--accent);"><strong>Résultat :</strong> Prototype fonctionnel démontrant des performances optimisées.</p>
-          </div>
-        </div>
-  
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">2021 — 2024</span>
-            <h3>Licence en Systèmes Informatiques et Logiciels</h3>
-            <h4>UATM Gasa Formation, Cotonou</h4>
-            <p>Formation en conception de systèmes, bases de données, programmation (Python, PHP, JavaScript), et gestion de projets.</p>
-            <div class="tags"><span>Systèmes informatiques</span><span>Bases de données</span><span>Programmation</span></div>
-          </div>
-        </div>
-  
-        <div class="tl-item reveal">
-          <div class="tl-dot"></div>
-          <div class="tl-card">
-            <span class="tl-date">2020 — 2021</span>
-            <h3>Baccalauréat Scientifique D</h3>
-            <h4>CS Gloria Dei, Cotonou</h4>
-            <p>Baccalauréat série D (Mathématiques et Sciences de la Vie et de la Terre).</p>
-            <div class="tags"><span>Mathematics</span><span>Sciences</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- PROJECTS -->
-  <section class="section section-alt" id="projects">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="projects.eyebrow">04 — Projets</span>
-        <h2 data-i18n="projects.title">Une sélection de mes <span class="grad">réalisations</span></h2>
-      </div>
-  
-      <div class="projects">
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-chart-line"></i></div>
-          <div class="project-body">
-            <span class="project-tag">MySQL</span>
-            <h3>Workforce Layoffs Trends Analysis (2026)</h3>
-            <p>Nettoyage et analyse d'un jeu de données réel sur les licenciements mondiaux (2026) pour identifier les secteurs, pays et entreprises les plus touchés.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007/workforce-layoffs-trends-analysis-2026" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007/workforce-layoffs-trends-analysis-2026" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-  
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-bicycle"></i></div>
-          <div class="project-body">
-            <span class="project-tag">Excel</span>
-            <h3>Bike Purchasing Behavior Dashboard</h3>
-            <p>Nettoyage, analyse et création d'un tableau de bord interactif sur les acheteurs de vélos : tranches d'âge, revenus, distance de trajet, état matrimonial.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007/bike-purchasing-behavior-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007/bike-purchasing-behavior-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-  
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-house"></i></div>
-          <div class="project-body">
-            <span class="project-tag">Tableau</span>
-            <h3>Airbnb Market Pricing Analysis</h3>
-            <p>Analyse des données Airbnb de Seattle : visualisation des prix par code postal, évolution des prix, rentabilité par nombre de chambres.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007/airbnb-market-pricing-analysis-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007/airbnb-market-pricing-analysis-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-  
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-users"></i></div>
-          <div class="project-body">
-            <span class="project-tag">Power BI</span>
-            <h3>Data Professionals Salary & Satisfaction Dashboard</h3>
-            <p>Analyse de plus de 600 professionnels de la data (sondage réel) : salaires, langages préférés, satisfaction et difficulté d'accès au métier.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007/data-professionals-salary-satisfaction-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007/data-professionals-salary-satisfaction-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-  
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-database"></i></div>
-          <div class="project-body">
-            <span class="project-tag">Python</span>
-            <h3>ETL Pipeline — Données Temps Réel</h3>
-            <p>Pipeline ETL automatisé avec Python pour ingérer, transformer et charger des données en temps réel. Gestion des erreurs, logging et monitoring inclus.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-  
-        <article class="project reveal">
-          <div class="project-media"><i class="fa-solid fa-globe"></i></div>
-          <div class="project-body">
-            <span class="project-tag">PHP / Laravel</span>
-            <h3>Web App — Gestion des Flux Opérationnels</h3>
-            <p>Application web de gestion des flux développée avec Laravel, intégrant des bases de données relationnelles pour optimiser les opérations et la traçabilité.</p>
-            <div class="project-links">
-              <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-  
-  <!-- DOCUMENTATION -->
-  <section class="section" id="about-site">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow" data-i18n="about-site.eyebrow">05 — À propos du site</span>
-        <h2 data-i18n="about-site.title">Documentation du portfolio</h2>
-        <p data-i18n="about-site.description">Ce site a été créé avec :</p>
-        <ul class="docs-list reveal">
-          <li><strong>HTML5</strong> – structure sémantique.</li>
-          <li><strong>CSS3</strong> avec Flexbox/Gradients, variables CSS.</li>
-          <li><strong>JavaScript vanilla</strong> (IntersectionObserver, Formspree SDK, thème, loader, etc.).</li>
-          <li><strong>Font Awesome 6</strong> pour les icônes.</li>
-          <li><strong>Formspree</strong> pour le formulaire de contact (AJAX).</li>
-          <li><strong>GitHub Pages</strong> pour l'hébergement statique.</li>
-        </ul>
-        <p data-i18n="about-site.descriptionDetail">Le site est responsive, accessible et optimisé pour le chargement rapide.</p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="section section-alt" id="blog">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow" data-i18n="blog.eyebrow">06 — Blog</span>
-      <h2 data-i18n="blog.title">Mes articles techniques</h2>
-      <p data-i18n="blog.description">Voici quelques articles où je partage mes découvertes en data analysis et développement.</p>
-    </div>
-    <div class="blog-posts">
-      <div class="blog-post reveal">
-        <div class="post-meta"><span class="post-date">Juillet 2026</span> <span class="post-tag">Data</span></div>
-        <h3>Analyse des tendances des licenciements technologiques en 2026</h3>
-        <p>Exploration des facteurs derrière l'augmentation des licenciements dans le secteur technologique mondial, basée sur des données réelles de 2026.</p>
-        <a href="#" class="btn btn-sm btn-ghost">Lire la suite</a>
-      </div>
-      <div class="blog-post reveal">
-        <div class="post-meta"><span class="post-date">Août 2026</span> <span class="post-tag">Développement</span></div>
-        <h3>Optimisation des performances d'une application Laravel avec caching Redis</h3>
-        <p>Amélioration du temps de réponse de 40% grâce à l'implémentation d'un système de caching pour les requêtes fréquentes.</p>
-        <a href="#" class="btn btn-sm btn-ghost">Lire la suite</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="contact-wrap">
-        <div class="contact-info reveal">
-          <span class="eyebrow" data-i18n="contact.eyebrow">07 — Contact</span>
-          <h2 data-i18n="contact.title">Travaillons <span class="grad">ensemble</span></h2>
-          <p data-i18n="contact.description">Une question, un projet ou une opportunité ? Écrivez-moi, je réponds rapidement.</p>
-  
-          <ul class="contact-list">
-            <li><a href="mailto:walyiyessoufou@gmail.com"><i class="fa-solid fa-envelope"></i> walyiyessoufou@gmail.com</a></li>
-            <li><a href="tel:+2290161555321"><i class="fa-solid fa-phone"></i> +229 01 61 55 53 21</a></li>
+   
+   <!-- LOADER -->
+   <div class="loader" id="loader">
+     <div class="loader-mark">WY</div>
+     <div class="loader-bar"><span id="loaderFill"></span></div>
+   </div>
+   
+   <!-- PROGRESS -->
+   <div class="scroll-progress" id="scrollProgress"></div>
+   
+   <!-- NAV -->
+   <header class="nav" id="nav">
+     <div class="nav-inner">
+       <a href="#hero" class="brand">
+         <span class="brand-mark">WY</span>
+         <span class="brand-text">Walyi<em>.</em></span>
+       </a>
+       <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+         <a href="#services" data-i18n="nav.about">À propos</a>
+         <a href="#prestations" data-i18n="nav.skills">Compétences</a>
+         <a href="#experience" data-i18n="nav.experience">Parcours</a>
+         <a href="#projects" data-i18n="nav.projects">Projets</a>
+         <a href="#contact" data-i18n="nav.contact">Contact</a>
+       </nav>
+       <div class="nav-actions">
+         <button class="icon-btn" id="themeToggle" aria-label="Changer de thème">
+           <i class="fa-solid fa-moon"></i>
+         </button>
+         <a href="assets/cv.pdf" download class="btn btn-sm btn-ghost">
+           <i class="fa-solid fa-download"></i> CV
+         </a>
+         <a href="#contact" class="btn btn-sm btn-solid">Me contacter</a>
+         <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false">
+           <i class="fa-solid fa-bars"></i>
+         </button>
+       </div>
+     </div>
+   </header>
+   
+   <!-- HERO -->
+   <section class="hero" id="hero">
+     <div class="hero-glow g1"></div>
+     <div class="hero-glow g2"></div>
+     <div class="hero-grid-bg"></div>
+   
+     <div class="container hero-inner">
+       <div class="hero-copy">
+         <div class="pill reveal" data-i18n="hero.pill">
+           <span class="dot"></span> Data Analyst & Dev — Cotonou, Bénin — Services & Projets
+         </div>
+   
+         <h1 class="hero-title reveal" data-i18n="hero.title">
+           Walyi Yessoufou<br />
+           <span class="grad">Data Analyst & Dev</span>
+         </h1>
+   
+         <p class="hero-role reveal" data-i18n="hero.role">
+           <span id="typed"></span><span class="caret"></span>
+         </p>
+   
+         <p class="hero-desc reveal" data-i18n="hero.desc">
+           SQL • Python • Power BI • Laravel • Automatisation<br />
+           Je transforme tes données en décisions concrètes.
+         </p>
+   
+         <div class="hero-cta reveal">
+           <a href="#projects" class="btn btn-solid">Voir mes projets <i class="fa-solid fa-arrow-right"></i></a>
+           <a href="assets/cv.pdf" download class="btn btn-ghost">
+             <i class="fa-solid fa-download"></i> Télécharger le CV
+           </a>
+         </div>
+   
+         <div class="hero-stats reveal">
+           <div class="stat">
+             <strong data-count="4">0</strong>
+             <span>Projets</span>
+           </div>
+           <div class="stat">
+             <strong data-count="3">0</strong>
+             <span>Services</span>
+           </div>
+           <div class="stat">
+             <strong data-count="1">0</span>
+             <span>Année expérience</span>
+           </div>
+         </div>
+       </div>
+   
+       <!-- PHOTO PRO -->
+       <div class="hero-photo reveal">
+         <div class="photo-frame">
+           <div class="photo-ring"></div>
+           <div class="photo">
+             <img src="assets/photo-pro.jpg" alt="Walyi Yessoufou Ademonla Alamou — Photo professionnelle" />
+           </div>
+           <div class="float-card fc1"><i class="fa-solid fa-chart-line"></i> Data</div>
+           <div class="float-card fc2"><i class="fa-solid fa-code"></i> Dev</div>
+           <div class="float-card fc3"><i class="fa-solid fa-bolt"></i> Automatisation</div>
+         </div>
+       </div>
+     </div>
+   
+     <a href="#services" class="scroll-hint"><span></span>Défiler</a>
+   </section>
+   
+   <!-- MARQUEE -->
+   <div class="marquee" aria-hidden="true">
+     <div class="marquee-track">
+       <span>SQL</span><span>•</span><span>Python</span><span>•</span><span>Power BI</span><span>•</span>
+       <span>Tableau</span><span>•</span><span>PHP / Laravel</span><span>•</span>
+       <span>Excel avancé</span><span>•</span>
+       <span>Git</span><span>•</span><span>Databricks</span><span>•</span>
+       <span>ETL</span><span>•</span>
+       <span>SQL</span><span>•</span><span>Python</span><span>•</span><span>Power BI</span><span>•</span>
+       <span>Tableau</span><span>•</span><span>PHP / Laravel</span><span>•</span>
+       <span>Excel avancé</span><span>•</span>
+       <span>Git</span><span>•</span><span>Databricks</span><span>•</span>
+       <span>ETL</span><span>•</span>
+     </div>
+   </div>
+   
+   <!-- SERVICES -->
+   <section class="section" id="services">
+     <div class="container">
+       <div class="section-head reveal">
+         <span class="eyebrow" data-i18n="services.eyebrow">01 — Services</span>
+         <h2 data-i18n="services.title">Ce que je <span class="grad">fais</span></h2>
+         <p data-i18n="services.description">Data, dev et automatisation — des solutions concrètes pour ton business.</p>
+       </div>
+   
+       <div class="services-grid">
+         <article class="service-card reveal">
+           <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
+           <h3 data-i18n="services.dataAnalysis.title">Data Analysis</h3>
+           <p data-i18n="services.dataAnalysis.description">SQL, Python, Power BI — je nettoie, analyse et visualise tes données pour des décisions éclairées.</p>
+           <div class="tags"><span>SQL</span><span>Python</span><span>Power BI</span></div>
+         </article>
+         <article class="service-card reveal">
+           <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+           <h3 data-i18n="services.webDev.title">Développement Web</h3>
+           <p data-i18n="services.webDev.description">Laravel, HTML/CSS, JS — sites vitrines, apps web, dashboards interactifs.</p>
+           <div class="tags"><span>Laravel</span><span>PHP</span><span>JS</span></div>
+         </article>
+         <article class="service-card reveal">
+           <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+           <h3 data-i18n="services.automation.title">Automatisation</h3>
+           <p data-i18n="services.automation.description">Scripts Python, ETL, web scraping — j'automatise tes tâches répétitives pour gagner du temps.</p>
+           <div class="tags"><span>Python</span><span>ETL</span><span>Scraping</span></div>
+         </article>
+         <article class="service-card reveal">
+           <div class="service-icon"><i class="fa-solid fa-file-excel"></i></div>
+           <h3 data-i18n="services.excelBi.title">Excel & BI</h3>
+           <p data-i18n="services.excelBi.description">Tableaux de bord Power BI, Excel avancé, TCD, Power Query — tes données devenues visibles.</p>
+           <div class="tags"><span>Excel</span><span>Power BI</span><span>DAX</span></div>
+         </article>
+       </div>
+     </div>
+   </section>
+   
+   <!-- PRESTATIONS -->
+   <section class="section section-alt" id="prestations">
+     <div class="container">
+       <div class="section-head reveal">
+         <span class="eyebrow" data-i18n="prestations.eyebrow">02 — Prestations</span>
+         <h2 data-i18n="prestations.title">Les outils que j'utilise <span class="grad">au quotidien</span></h2>
+       </div>
+   
+       <div class="skills-wrap">
+         <div class="skill-col reveal">
+           <h3><i class="fa-solid fa-database"></i> Bases de données</h3>
+           <div class="bars">
+             <div class="bar"><div class="bar-top"><span>SQL — MySQL, PostgreSQL</span><span>85%</span></div><div class="track"><i data-w="85"></i></div></div>
+             <div class="bar"><div class="bar-top"><span>Cloud & Big Data — Azure, AWS, Databricks</span><span>40%</span></div><div class="track"><i data-w="40"></i></div></div>
+             <div class="bar"><div class="bar-top"><span>Outils & Méthodes — Excel, TCD, Git, ETL</span><span>75%</span></div><div class="track"><i data-w="75"></i></div></div>
+           </div>
+         </div>
+   
+         <div class="skill-col reveal">
+           <h3><i class="fa-solid fa-chart-line"></i> Analyse & Visualisation</h3>
+           <div class="bars">
+             <div class="bar"><div class="bar-top"><span>Python — Pandas, NumPy, Matplotlib</span><span>75%</span></div><div class="track"><i data-w="75"></i></div></div>
+             <div class="bar"><div class="bar-top"><span>Tableau & Power BI (DAX, Power Query)</span><span>70%</span></div><div class="track"><i data-w="70"></i></div></div>
+             <div class="bar"><div class="bar-top"><span>Développement — PHP, JS, Laravel, HTML/CSS</span><span>65%</span></div><div class="track"><i data-w="65"></i></div></div>
+           </div>
+         </div>
+       </div>
+   
+       <div class="chips reveal">
+         <span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>Python</span>
+         <span>Pandas</span><span>NumPy</span><span>Tableau</span><span>Power BI</span>
+         <span>Excel</span><span>Power Query</span><span>TCD</span><span>DAX</span><span>PHP</span>
+         <span>JavaScript</span><span>Laravel</span><span>HTML / CSS</span><span>Git</span>
+         <span>Azure</span><span>AWS</span><span>Databricks</span><span>ETL</span><span>Web Scraping</span>
+       </div>
+     </div>
+   </section>
+   
+   <!-- EXPERIENCE -->
+   <section class="section" id="experience">
+     <div class="container">
+       <div class="section-head reveal">
+         <span class="eyebrow" data-i18n="experience.eyebrow">03 — Parcours</span>
+         <h2 data-i18n="experience.title">Expériences & <span class="grad">formation</span></h2>
+       </div>
+   
+       <div class="timeline">
+         <div class="tl-item reveal">
+           <div class="tl-dot"></div>
+           <div class="tl-card">
+             <span class="tl-date">Octobre 2024 — Décembre 2024</span>
+             <h3>Stagiaire Fullstack</h3>
+             <h4>Port Autonome de Cotonou</h4>
+             <p>Développement d'une application web de gestion des flux avec Laravel, intégrant des bases de données relationnelles. Analyse et traitement de données pour optimiser les flux opérationnels et améliorer la traçabilité.</p>
+             <div class="tags"><span>Laravel</span><span>PHP</span><span>SQL</span><span>Analyse de données</span></div>
+             <p style="margin-top:14px;font-size:0.9rem;color:var(--accent);"><strong>Résultat :</strong> Optimisation du suivi des opérations et réduction des erreurs de saisie.</p>
+           </div>
+         </div>
+   
+         <div class="tl-item reveal">
+           <div class="tl-dot"></div>
+           <div class="tl-card">
+             <span class="tl-date">Février 2024 — Juin 2024</span>
+             <h3>Stagiaire Développement</h3>
+             <h4>UATM Gasa Formation</h4>
+             <p>Développement d'un programme avec Python, intégrant la gestion et l'analyse de données. Traitement des données en temps réel pour améliorer les fonctionnalités du programme. Prototypage et optimisation des algorithmes de traitement des données.</p>
+             <div class="tags"><span>Python</span><span>Analyse de données</span><span>Algorithmes</span></div>
+             <p style="margin-top:14px;font-size:0.9rem;color:var(--accent);"><strong>Résultat :</strong> Prototype fonctionnel démontrant des performances optimisées.</p>
+           </div>
+         </div>
+   
+         <div class="tl-item reveal">
+           <div class="tl-dot"></div>
+           <div class="tl-card">
+             <span class="tl-date">2021 — 2024</span>
+             <h3>Licence en Systèmes Informatiques et Logiciels</h3>
+             <h4>UATM Gasa Formation, Cotonou</h4>
+             <p>Formation en conception de systèmes, bases de données, programmation (Python, PHP, JavaScript), et gestion de projets.</p>
+             <div class="tags"><span>Systèmes informatiques</span><span>Bases de données</span><span>Programmation</span></div>
+           </div>
+         </div>
+   
+         <div class="tl-item reveal">
+           <div class="tl-dot"></div>
+           <div class="tl-card">
+             <span class="tl-date">2020 — 2021</span>
+             <h3>Baccalauréat Scientifique D</h3>
+             <h4>CS Gloria Dei, Cotonou</h4>
+             <p>Baccalauréat série D (Mathématiques et Sciences de la Vie et de la Terre).</p>
+             <div class="tags"><span>Mathematics</span><span>Sciences</span></div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
+   
+   <!-- PROJECTS -->
+   <section class="section section-alt" id="projects">
+     <div class="container">
+       <div class="section-head reveal">
+         <span class="eyebrow" data-i18n="projects.eyebrow">04 — Projets</span>
+         <h2 data-i18n="projects.title">Une sélection de mes <span class="grad">réalisations</span></h2>
+       </div>
+   
+       <div class="projects">
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-chart-line"></i></div>
+           <div class="project-body">
+             <span class="project-tag">MySQL</span>
+             <h3>Workforce Layoffs Trends Analysis (2026)</h3>
+             <p>Nettoyage et analyse d'un jeu de données réel sur les licenciements mondiaux (2026) pour identifier les secteurs, pays et entreprises les plus touchés.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007/workforce-layoffs-trends-analysis-2026" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007/workforce-layoffs-trends-analysis-2026" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+   
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-bicycle"></i></div>
+           <div class="project-body">
+             <span class="project-tag">Excel</span>
+             <h3>Bike Purchasing Behavior Dashboard</h3>
+             <p>Nettoyage, analyse et création d'un tableau de bord interactif sur les acheteurs de vélos : tranches d'âge, revenus, distance de trajet, état matrimonial.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007/bike-purchasing-behavior-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007/bike-purchasing-behavior-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+   
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-house"></i></div>
+           <div class="project-body">
+             <span class="project-tag">Tableau</span>
+             <h3>Airbnb Market Pricing Analysis</h3>
+             <p>Analyse des données Airbnb de Seattle : visualisation des prix par code postal, évolution des prix, rentabilité par nombre de chambres.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007/airbnb-market-pricing-analysis-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007/airbnb-market-pricing-analysis-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+   
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-users"></i></div>
+           <div class="project-body">
+             <span class="project-tag">Power BI</span>
+             <h3>Data Professionals Salary & Satisfaction Dashboard</h3>
+             <p>Analyse de plus de 600 professionnels de la data (sondage réel) : salaires, langages préférés, satisfaction et difficulté d'accès au métier.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007/data-professionals-salary-satisfaction-dashboard" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007/data-professionals-salary-satisfaction-dashboard" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+   
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-database"></i></div>
+           <div class="project-body">
+             <span class="project-tag">Python</span>
+             <h3>ETL Pipeline — Données Temps Réel</h3>
+             <p>Pipeline ETL automatisé avec Python pour ingérer, transformer et charger des données en temps réel. Gestion des erreurs, logging et monitoring inclus.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+   
+         <article class="project reveal">
+           <div class="project-media"><i class="fa-solid fa-globe"></i></div>
+           <div class="project-body">
+             <span class="project-tag">PHP / Laravel</span>
+             <h3>Web App — Gestion des Flux Opérationnels</h3>
+             <p>Application web de gestion des flux développée avec Laravel, intégrant des bases de données relationnelles pour optimiser les opérations et la traçabilité.</p>
+             <div class="project-links">
+               <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+               <a href="https://github.com/Walyi007" class="project-link" target="_blank" rel="noopener">Démo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+             </div>
+           </div>
+         </article>
+       </div>
+     </div>
+   </section>
+   
+   <!-- DOCUMENTATION -->
+   <section class="section" id="about-site">
+     <div class="container">
+       <div class="section-head reveal">
+         <span class="eyebrow" data-i18n="about-site.eyebrow">05 — À propos du site</span>
+         <h2 data-i18n="about-site.title">Documentation du portfolio</h2>
+         <p data-i18n="about-site.description">Ce site a été créé avec :</p>
+         <ul class="docs-list reveal">
+           <li><strong>HTML5</strong> – structure sémantique.</li>
+           <li><strong>CSS3</strong> avec Flexbox/Gradients, variables CSS.</li>
+           <li><strong>JavaScript vanilla</strong> (IntersectionObserver, Formspree SDK, thème, loader, etc.).</li>
+           <li><strong>Font Awesome 6</strong> pour les icônes.</li>
+           <li><strong>Formspree</strong> pour le formulaire de contact (AJAX).</li>
+           <li><strong>GitHub Pages</strong> pour l'hébergement statique.</li>
+         </ul>
+         <p data-i18n="about-site.descriptionDetail">Le site est responsive, accessible et optimisé pour le chargement rapide.</p>
+       </div>
+     </div>
+   </section>
+   
+   <section class="section section-alt" id="blog">
+   <div class="container">
+     <div class="section-head reveal">
+       <span class="eyebrow" data-i18n="blog.eyebrow">06 — Blog</span>
+       <h2 data-i18n="blog.title">Mes articles techniques</h2>
+       <p data-i18n="blog.description">Voici quelques articles où je partage mes découvertes en data analysis et développement.</p>
+     </div>
+     <div class="blog-posts">
+       <div class="blog-post reveal">
+         <div class="post-meta"><span class="post-date">Juillet 2026</span> <span class="post-tag">Data</span></div>
+         <h3>Analyse des tendances des licenciements technologiques en 2026</h3>
+         <p>Exploration des facteurs derrière l'augmentation des licenciements dans le secteur technologique mondial, basée sur des données réelles de 2026.</p>
+         <a href="#" class="btn btn-sm btn-ghost">Lire la suite</a>
+       </div>
+       <div class="blog-post reveal">
+         <div class="post-meta"><span class="post-date">Août 2026</span> <span class="post-tag">Développement</span></div>
+         <h3>Optimisation des performances d'une application Laravel avec caching Redis</h3>
+         <p>Amélioration du temps de réponse de 40% grâce à l'implémentation d'un système de caching pour les requêtes fréquentes.</p>
+         <a href="#" class="btn btn-sm btn-ghost">Lire la suite</a>
+       </div>
+     </div>
+   </div>
+ </section>
+ 
+ 
+ 
+ <!-- CONTACT -->
+   <section class="section" id="contact">
+     <div class="container">
+       <div class="contact-wrap">
+         <div class="contact-info reveal">
+           <span class="eyebrow" data-i18n="contact.eyebrow">07 — Contact</span>
+           <h2 data-i18n="contact.title">Travaillons <span class="grad">ensemble</span></h2>
+           <p data-i18n="contact.description">Une question, un projet ou une opportunité ? Écrivez-moi, je réponds rapidement.</p>
+   
+           <ul class="contact-list">
+             <li><a href="mailto:walyiyessoufou@gmail.com"><i class="fa-solid fa-envelope"></i> walyiyessoufou@gmail.com</a></li>
+             <li><a href="tel:+2290161555321"><i class="fa-solid fa-phone"></i> +229 01 61 55 53 21</a></li>
              <li><a href="https://wa.me/2290161555321"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
-            <li><i class="fa-solid fa-location-dot"></i> Agblangandan, Sèkandji, Cotonou, Bénin</li>
-          </ul>
-  
-          <div class="socials">
-            <a href="https://github.com/Walyi007" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-            <a href="https://linkedin.com/in/walyi-adémonla-alamou-yessoufou-554856388" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://datascienceportol.io/WalyiData" aria-label="Portfolio" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i></a>
-          </div>
-        </div>
-  
-        <form class="contact-form reveal" id="contactForm" novalidate>
-          <div data-fs-success></div>
-          <div data-fs-error></div>
-  
-          <div class="field">
-            <label for="name" data-i18n="contact.form.name">Nom</label>
-            <input type="text" id="name" name="name" placeholder="Votre nom" required data-fs-field />
-            <span data-fs-error="name"></span>
-          </div>
-  
-          <div class="field">
-            <label for="email" data-i18n="contact.form.email">Email</label>
-            <input type="email" id="email" name="email" placeholder="vous@exemple.com" required data-fs-field />
-            <span data-fs-error="email"></span>
-          </div>
-  
-          <div class="field">
-            <label for="subject" data-i18n="contact.form.subject">Sujet</label>
-            <input type="text" id="subject" name="subject" placeholder="Proposition de projet" data-fs-field />
-            <span data-fs-error="subject"></span>
-          </div>
-  
-          <div class="field">
-            <label for="message" data-i18n="contact.form.message">Message</label>
-            <textarea id="message" name="message" rows="5"
-                      placeholder="Décrivez votre besoin..." required data-fs-field></textarea>
-            <span data-fs-error="message"></span>
-          </div>
-  
-          <button type="submit" class="btn btn-solid btn-block" id="submitBtn"
-                  data-fs-submit-btn>
-            <span>Envoyer le message</span>
-            <i class="fa-solid fa-paper-plane"></i>
-          </button>
-  
-          <!-- Your custom note area (keep for styling) -->
-          <p class="form-note" id="formNote"></p>
-        </form>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="brand-mark">WY</span>
-        <p>Walyi Yessoufou Ademonla Alamou — Portfolio</p>
-      </div>
-      <nav class="footer-links" aria-label="Liens rapides">
-        <a href="#services" data-i18n="nav.about">À propos</a>
-        <a href="#prestations" data-i18n="nav.skills">Compétences</a>
-        <a href="#experience" data-i18n="nav.experience">Parcours</a>
-        <a href="#projects" data-i18n="nav.projects">Projets</a>
-        <a href="#contact" data-i18n="nav.contact">Contact</a>
-      </nav>
-      <p class="footer-copy" data-i18n="footer.copyright">© <span id="year"></span> Walyi Yessoufou Ademonla Alamou. Tous droits réservés.</p>
-    </div>
-  </footer>
-  
-  <button class="to-top" id="toTop" aria-label="Haut de page">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-  
-  <script>
+             <li><i class="fa-solid fa-location-dot"></i> Agblangandan, Sèkandji, Cotonou, Bénin</li>
+           </ul>
+   
+           <div class="socials">
+             <a href="https://github.com/Walyi007" aria-label="GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+             <a href="https://linkedin.com/in/walyi-adémonla-alamou-yessoufou-554856388" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+             <a href="https://datascienceportol.io/WalyiData" aria-label="Portfolio" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i></a>
+           </div>
+         </div>
+   
+         <form class="contact-form reveal" id="contactForm" novalidate>
+           <div data-fs-success></div>
+           <div data-fs-error></div>
+   
+           <div class="field">
+             <label for="name" data-i18n="contact.form.name">Nom</label>
+             <input type="text" id="name" name="name" placeholder="Votre nom" required data-fs-field />
+             <span data-fs-error="name"></span>
+           </div>
+   
+           <div class="field">
+             <label for="email" data-i18n="contact.form.email">Email</label>
+             <input type="email" id="email" name="email" placeholder="vous@exemple.com" required data-fs-field />
+             <span data-fs-error="email"></span>
+           </div>
+   
+           <div class="field">
+             <label for="subject" data-i18n="contact.form.subject">Sujet</label>
+             <input type="text" id="subject" name="subject" placeholder="Proposition de projet" data-fs-field />
+             <span data-fs-error="subject"></span>
+           </div>
+   
+           <div class="field">
+             <label for="message" data-i18n="contact.form.message">Message</label>
+             <textarea id="message" name="message" rows="5"
+                       placeholder="Décrivez votre besoin..." required data-fs-field></textarea>
+             <span data-fs-error="message"></span>
+           </div>
+   
+           <button type="submit" class="btn btn-solid btn-block" id="submitBtn"
+                   data-fs-submit-btn data-i18n="contact.form.submit">
+             <span>Envoyer le message</span>
+             <i class="fa-solid fa-paper-plane"></i>
+           </button>
+   
+           <!-- Your custom note area (keep for styling) -->
+           <p class="form-note" id="formNote"></p>
+         </form>
+       </div>
+     </div>
+   </section>
+   
+   <!-- FOOTER -->
+   <footer class="footer">
+     <div class="container footer-inner">
+       <div class="footer-brand">
+         <span class="brand-mark">WY</span>
+         <p>Walyi Yessoufou Ademonla Alamou — Portfolio</p>
+       </div>
+       <nav class="footer-links" aria-label="Liens rapides">
+         <a href="#services">À propos</a>
+         <a href="#prestations">Compétences</a>
+         <a href="#experience">Parcours</a>
+         <a href="#projects">Projets</a>
+         <a href="#contact">Contact</a>
+       </nav>
+       <p class="footer-copy" data-i18n="footer.copyright">© <span id="year"></span> Walyi Yessoufou Ademonla Alamou. Tous droits réservés.</p>
+     </div>
+   </footer>
+   
+   <button class="to-top" id="toTop" aria-label="Haut de page">
+     <i class="fa-solid fa-arrow-up"></i>
+   </button>
+   
+   <script>
+     // Language selector with debug logging
      let translations = {};
 
      async function loadTranslations() {
        try {
+         console.log('Fetching i18n.json');
          const resp = await fetch('i18n.json');
+         if (!resp.ok) {
+           throw new Error(`HTTP error! status: ${resp.status}`);
+         }
          translations = await resp.json();
+         console.log('Translations loaded', translations);
        } catch (e) {
          console.error('Failed to load translations', e);
        }
@@ -598,7 +605,7 @@
            // Use innerHTML to allow formatted text like <br> or <span class="grad">
            el.innerHTML = value;
          }
-       }
+       });
        // Also update language button flag
        const currentLangSpan = document.getElementById('currentLang');
        if (currentLangSpan) {
@@ -607,6 +614,7 @@
      }
 
      document.addEventListener('DOMContentLoaded', async () => {
+       console.log('DOMContentLoaded');
        await loadTranslations();
        // Create language selector
        const langSelector = document.createElement('div');
@@ -621,9 +629,13 @@
            <a href="#" data-lang="en">English</a>
          </div>
        `;
+       console.log('Language selector HTML set');
        const themeToggle = document.getElementById('themeToggle');
        if (themeToggle) {
          themeToggle.parentNode.insertBefore(langSelector, themeToggle.nextSibling);
+         console.log('Inserted language selector after themeToggle');
+       } else {
+         console.warn('themeToggle not found');
        }
        const currentLangSpan = document.getElementById('currentLang');
        const langDropdown = document.getElementById('languageDropdown');
@@ -643,6 +655,8 @@
              langDropdown.classList.remove('show');
            });
          });
+       } else {
+         console.warn('Language button/dropdown/span not found');
        }
        // Close dropdown when clicking outside
        document.addEventListener('click', e => {
@@ -652,9 +666,10 @@
        });
        // Initial translation to FR (default)
        translatePage('fr');
+       console.log('Initial translation to FR done');
      });
    </script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <script src="app.js"></script>
+   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+   <script src="app.js"></script>
 </body>
 </html>
