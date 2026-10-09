@@ -568,13 +568,14 @@
    </button>
    
     <script>
+console.log('Language script started');
       // Language selector with synchronous XHR for file:// compatibility
       let translations = {};
 
       function loadTranslations() {
         try {
           const xhr = new XMLHttpRequest();
-          xhr.open('GET', 'i18n.json', false); // synchronous
+          xhr.open('GET', 'i18n.json?ts=' + Date.now(), false); // synchronous
           xhr.overrideMimeType('application/json');
           xhr.send(null);
           if (xhr.status === 200) {
@@ -646,6 +647,7 @@
         if (languageBtn && langDropdown && currentLangSpan) {
           languageBtn.addEventListener('click', e => {
             e.stopPropagation();
+             console.log('Language button clicked');
             langDropdown.classList.toggle('show');
           });
           langDropdown.querySelectorAll('a').forEach(link => {
