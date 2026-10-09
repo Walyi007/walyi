@@ -677,19 +677,3 @@
    <script src="app.js"></script>
 </body>
 </html>
-    <script>
-      // Fallback loader if translations empty (for file:// compatibility)
-      if (typeof translations !== 'undefined' && Object.keys(translations).length === 0) {
-        const xhr = new XMLHttpRequest();
-        xhr.open('GET', 'i18n.json', false);
-        xhr.overrideMimeType('application/json');
-        xhr.send(null);
-        if (xhr.status === 200) {
-          translations = JSON.parse(xhr.responseText);
-          // retranslate to current language (default FR)
-          const currentLangSpan = document.getElementById('currentLang');
-          const currentLang = currentLangSpan ? currentLangSpan.textContent.toLowerCase() : 'fr';
-          translatePage(currentLang);
-        }
-      }
-    </script>
