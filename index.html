@@ -567,110 +567,129 @@
      <i class="fa-solid fa-arrow-up"></i>
    </button>
    
-   <script>
-     // Language selector with debug logging
-     let translations = {};
+    <script>
+      // Language selector with synchronous XHR for file:// compatibility
+      let translations = {};
 
-     async function loadTranslations() {
-       try {
-         console.log('Fetching i18n.json');
-         const resp = await fetch('i18n.json');
-         if (!resp.ok) {
-           throw new Error(`HTTP error! status: ${resp.status}`);
-         }
-         translations = await resp.json();
-         console.log('Translations loaded', translations);
-       } catch (e) {
-         console.error('Failed to load translations', e);
-       }
-     }
+      function loadTranslations() {
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', 'i18n.json', false); // synchronous
+          xhr.overrideMimeType('application/json');
+          xhr.send(null);
+          if (xhr.status === 200) {
+            translations = JSON.parse(xhr.responseText);
+            console.log('Translations loaded via XHR', translations);
+          } else {
+            console.error('Failed to load i18n.json: status', xhr.status);
+          }
+        } catch (e) {
+          console.error('Error loading translations:', e);
+        }
+      }
 
-     function translatePage(lang) {
-       // Update html lang attribute
-       document.documentElement.setAttribute('lang', lang);
-       // Translate elements with data-i18n
-       document.querySelectorAll('[data-i18n]').forEach(el => {
-         const key = el.getAttribute('data-i18n');
-         const keys = key.split('.');
-         let value = translations[lang];
-         for (const k of keys) {
-           if (value && value[k] !== undefined) {
-             value = value[k];
-           } else {
-             value = null;
-             break;
-           }
-         }
-         if (value !== null && value !== undefined) {
-           // Use innerHTML to allow formatted text like <br> or <span class="grad">
-           el.innerHTML = value;
-         }
-       });
-       // Also update language button flag
-       const currentLangSpan = document.getElementById('currentLang');
-       if (currentLangSpan) {
-         currentLangSpan.textContent = lang.toUpperCase();
-       }
-     }
+      function translatePage(lang) {
+        // Update html lang attribute
+        document.documentElement.setAttribute('lang', lang);
+        // Translate elements with data-i18n
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          const keys = key.split('.');
+          let value = translations[lang];
+          for (const k of keys) {
+            if (value && value[k] !== undefined) {
+              value = value[k];
+            } else {
+              value = null;
+              break;
+            }
+          }
+          if (value !== null && value !== undefined) {
+            // Use innerHTML to allow formatted text like <br> or <span class="grad">
+            el.innerHTML = value;
+          }
+        });
+        // Also update language button flag
+        const currentLangSpan = document.getElementById('currentLang');
+        if (currentLangSpan) {
+          currentLangSpan.textContent = lang.toUpperCase();
+        }
+      }
 
-     document.addEventListener('DOMContentLoaded', async () => {
-       console.log('DOMContentLoaded');
-       await loadTranslations();
-       // Create language selector
-       const langSelector = document.createElement('div');
-       langSelector.className = 'language-selector';
-       langSelector.innerHTML = `
-         <button class="language-btn" id="languageBtn" aria-label="Changer de langue">
-           <span id="currentLang">FR</span>
-           <i class="fas fa-chevron-down"></i>
-         </button>
-         <div class="language-dropdown" id="languageDropdown">
-           <a href="#" data-lang="fr">Français</a>
-           <a href="#" data-lang="en">English</a>
-         </div>
-       `;
-       console.log('Language selector HTML set');
-       const themeToggle = document.getElementById('themeToggle');
-       if (themeToggle) {
-         themeToggle.parentNode.insertBefore(langSelector, themeToggle.nextSibling);
-         console.log('Inserted language selector after themeToggle');
-       } else {
-         console.warn('themeToggle not found');
-       }
-       const currentLangSpan = document.getElementById('currentLang');
-       const langDropdown = document.getElementById('languageDropdown');
-       const languageBtn = document.getElementById('languageBtn');
-       if (languageBtn && langDropdown && currentLangSpan) {
-         languageBtn.addEventListener('click', e => {
-           e.stopPropagation();
-           langDropdown.classList.toggle('show');
-         });
-         langDropdown.querySelectorAll('a').forEach(link => {
-           link.addEventListener('click', e => {
-             e.preventDefault();
-             const lang = link.getAttribute('data-lang');
-             document.documentElement.setAttribute('data-lang', lang);
-             translatePage(lang);
-             currentLangSpan.textContent = lang.toUpperCase();
-             langDropdown.classList.remove('show');
-           });
-         });
-       } else {
-         console.warn('Language button/dropdown/span not found');
-       }
-       // Close dropdown when clicking outside
-       document.addEventListener('click', e => {
-         if (!document.getElementById('languageBtn')?.contains(e.target) && !document.getElementById('languageDropdown')?.contains(e.target)) {
-           document.getElementById('languageDropdown')?.classList.remove('show');
-         }
-       });
-       // Initial translation to FR (default)
-       translatePage('fr');
-       console.log('Initial translation to FR done');
-     });
-   </script>
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded');
+        loadTranslations();
+        // Create language selector
+        const langSelector = document.createElement('div');
+        langSelector.className = 'language-selector';
+        langSelector.innerHTML = `
+          <button class="language-btn" id="languageBtn" aria-label="Changer de langue">
+            <span id="currentLang">FR</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="language-dropdown" id="languageDropdown">
+            <a href="#" data-lang="fr">Français</a>
+            <a href="#" data-lang="en">English</a>
+          </div>
+        `;
+        console.log('Language selector HTML set');
+        const themeToggle = document.getElementById('themeToggle');
+        if (themeToggle) {
+          themeToggle.parentNode.insertBefore(langSelector, themeToggle.nextSibling);
+          console.log('Inserted language selector after themeToggle');
+        } else {
+          console.warn('themeToggle not found');
+        }
+        const currentLangSpan = document.getElementById('currentLang');
+        const langDropdown = document.getElementById('languageDropdown');
+        const languageBtn = document.getElementById('languageBtn');
+        if (languageBtn && langDropdown && currentLangSpan) {
+          languageBtn.addEventListener('click', e => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('show');
+          });
+          langDropdown.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', e => {
+              e.preventDefault();
+              const lang = link.getAttribute('data-lang');
+              document.documentElement.setAttribute('data-lang', lang);
+              translatePage(lang);
+              currentLangSpan.textContent = lang.toUpperCase();
+              langDropdown.classList.remove('show');
+            });
+          });
+        } else {
+          console.warn('Language button/dropdown/span not found');
+        }
+        // Close dropdown when clicking outside
+        document.addEventListener('click', e => {
+          if (!document.getElementById('languageBtn')?.contains(e.target) && !document.getElementById('languageDropdown')?.contains(e.target)) {
+            document.getElementById('languageDropdown')?.classList.remove('show');
+          }
+        });
+        // Initial translation to FR (default)
+        translatePage('fr');
+        console.log('Initial translation to FR done');
+      });
+    </script>
    <script>window.addEventListener('load', () => { const loader = document.getElementById('loader'); if (loader) loader.style.display = 'none'; });</script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
    <script src="app.js"></script>
 </body>
 </html>
+    <script>
+      // Fallback loader if translations empty (for file:// compatibility)
+      if (typeof translations !== 'undefined' && Object.keys(translations).length === 0) {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'i18n.json', false);
+        xhr.overrideMimeType('application/json');
+        xhr.send(null);
+        if (xhr.status === 200) {
+          translations = JSON.parse(xhr.responseText);
+          // retranslate to current language (default FR)
+          const currentLangSpan = document.getElementById('currentLang');
+          const currentLang = currentLangSpan ? currentLangSpan.textContent.toLowerCase() : 'fr';
+          translatePage(currentLang);
+        }
+      }
+    </script>
