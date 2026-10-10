@@ -504,44 +504,46 @@
            </div>
          </div>
    
-         <form class="contact-form reveal" id="contactForm" novalidate>
-           <div data-fs-success></div>
-           <div data-fs-error></div>
-   
-           <div class="field">
-             <label for="name" data-i18n="contact.form.name">Nom</label>
-             <input type="text" id="name" name="name" placeholder="Votre nom" required data-fs-field />
-             <span data-fs-error="name"></span>
-           </div>
-   
-           <div class="field">
-             <label for="email" data-i18n="contact.form.email">Email</label>
-             <input type="email" id="email" name="email" placeholder="vous@exemple.com" required data-fs-field />
-             <span data-fs-error="email"></span>
-           </div>
-   
-           <div class="field">
-             <label for="subject" data-i18n="contact.form.subject">Sujet</label>
-             <input type="text" id="subject" name="subject" placeholder="Proposition de projet" data-fs-field />
-             <span data-fs-error="subject"></span>
-           </div>
-   
-           <div class="field">
-             <label for="message" data-i18n="contact.form.message">Message</label>
-             <textarea id="message" name="message" rows="5"
-                       placeholder="Décrivez votre besoin..." required data-fs-field></textarea>
-             <span data-fs-error="message"></span>
-           </div>
-   
-           <button type="submit" class="btn btn-solid btn-block" id="submitBtn"
-                   data-fs-submit-btn data-i18n="contact.form.submit">
-             <span>Envoyer le message</span>
-             <i class="fa-solid fa-paper-plane"></i>
-           </button>
-   
-           <!-- Your custom note area (keep for styling) -->
-           <p class="form-note" id="formNote"></p>
-         </form>
+               <!-- ====== FORMULAIRE WHATSAPP ====== -->
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div data-fs-success></div>
+        <div data-fs-error></div>
+
+        <div class="field">
+          <label for="name" data-i18n="contact.form.name">Nom</label>
+          <input type="text" id="name" name="name" placeholder="Votre nom" required data-fs-field />
+          <span data-fs-error="name"></span>
+        </div>
+
+        <div class="field">
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" placeholder="vous@exemple.com" required data-fs-field />
+          <span data-fs-error="email"></span>
+        </div>
+
+        <div class="field">
+          <label for="subject" data-i18n="contact.form.subject">Sujet</label>
+          <input type="text" id="subject" name="subject" placeholder="Proposition de projet" data-fs-field />
+          <span data-fs-error="subject"></span>
+        </div>
+
+        <div class="field">
+          <label for="message" data-i18n="contact.form.message">Message</label>
+          <textarea id="message" name="message" rows="5"
+                    placeholder="Décrivez votre besoin..." required data-fs-field></textarea>
+          <span data-fs-error="message"></span>
+        </div>
+
+        <button type="button"
+                class="btn btn-solid btn-block"
+                id="whatsappBtn"
+                data-i18n="contact.form.submit">
+          Envoyer via WhatsApp
+          <i class="fa-brands fa-whatsapp"></i>
+        </button>
+
+        <p class="form-note" id="formNote"></p>
+      </form>
        </div>
      </div>
    </section>
@@ -681,5 +683,55 @@ console.log('Language script started');
    <script>window.addEventListener('load', () => { const loader = document.getElementById('loader'); if (loader) loader.style.display = 'none'; });</script>
 <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
    <script src="app.js"></script>
+
+  <!-- WhatsApp form handler -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form   = document.getElementById('contactForm');
+      const btn    = document.getElementById('whatsappBtn');
+      const note   = document.getElementById('formNote');
+
+      // Your WhatsApp number in international format without + or spaces
+      const WHATSAPP_NUMBER = '2290161555321'; // <-- change if needed
+
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const text =
+          `*Nouveau message depuis votre portfolio*
+
+` +
+          `*Nom* : ${name}
+` +
+          `*Email* : ${email}
+` +
+          `*Sujet* : ${subject}
+
+` +
+          `*Message*
+${message}`;
+
+        const encodedText = encodeURIComponent(text);
+        const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+
+        window.open(waUrl, '_blank');
+
+        note.textContent = 'Message prêt à être envoyé via WhatsApp.';
+        note.style.color = 'var(--accent)';
+
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          form.reset();
+          note.textContent = '';
+        }, 3000);
+      });
+    });
+  </script>
+
 </body>
 </html>
